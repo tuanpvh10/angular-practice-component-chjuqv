@@ -1,0 +1,19 @@
+<p>
+success-alert works!
+</p>
+<button class="btn btn-primary" [disabled]="isButton">
+  bootstrap button</button>
+
+<input type="text" class="form-control" 
+[(ngModel)]="name">
+
+
+<p *ngIf="name; else noName">{{name}}</p>
+<ng-template #noName>
+  <p>{{'no name'}}</p>
+</ng-template>
+
+<p *ngFor="let item of arr; let ind = index">
+  {{'item is '}} {{item}}
+  index is {{ind}}
+</p>
